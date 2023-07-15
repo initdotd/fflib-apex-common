@@ -1,0 +1,23 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: fflib-apex-common
+    package:
+        name: fflib-apex-common
+        api_version: '57.0'
+    dependencies:
+        - github: 'https://github.com/initdotd/fflib-apex-mocks'
+    git:
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/fflib-apex-common/tests
+            options:
+                outputdir: robot/fflib-apex-common/results
+
+    robot_testdoc:
+        options:
+            path: robot/fflib-apex-common/tests
+            output: robot/fflib-apex-common/doc/fflib-apex-common_tests.html
+
